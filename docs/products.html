@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yara Footwear</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container flex items-center justify-between mx-auto bg-[#1c1b1b] md:py-3">
+      <div class="logo ml-3">
+        <a href="#home">
+          
+          <img class="w-24 md:w-32 h-auto py-3 px-3" src="./images/LOGO YARA PNK_PJG.png" alt="Logo Yara">
+        </a>
+      </div>
+       <nav id="navigation">
+        <ul class="flex gap-4  py-1 px-6 hidden md:flex">
+          <li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold">Home</li>
+          <li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold">About</li>
+          <li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold">Product</li>
+          <li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold">Contact</li>
+        </ul>
+       </nav>
+       <div id="hamburger" class="flex flex-col justify-center md:hidden lg:hidden"white
+        <div class="relative  sm:max-w-xl mx-auto">
+            <nav x-data="{ open: false }">
+                <button class="w-14 h-14 relative focus:outline-none rounded" @click="open = !open">
+                    <div class="block w-5 absolute left-6 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                        <span  class="block absolute h-0.5 w-7 text-white bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                        <span  class="block absolute  h-0.5 w-5 text-white bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                        <span  class="block absolute  h-0.5 w-7 text-white bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+    </div>
+    </div>
+    <div id="mobile-nav" class="hidden mx-auto w-[90%] my-3 bg-[#fbf4ea]">
+      <ul class="gap-4 py-3 px-3 mx-2">
+        <li class="py-2 px-3 cursor-pointer ease-in duration-100 bg-[#1c1b1b] text-white font-cormorant font-bold">Home</li>
+        <li class="py-2 px-3 cursor-pointer ease-in duration-100 hover:bg-[#1c1b1b] hover:bg-opacity-55 hover:text-white font-cormorant font-bold text-[#1c1b1b]">About</li>
+        <li class="py-2 px-3 cursor-pointer ease-in duration-100 hover:bg-[#1c1b1b] hover:text-white font-cormorant font-bold text-[#1c1b1b]">Product</li>
+        <li class="py-2 px-3 cursor-pointer ease-in duration-100 hover:bg-[#1c1b1b] hover:text-white font-cormorant font-bold text-[#1c1b1b]">Contact</li>
+      </ul>
+    </div>
+  </header>
+  <main class="w-[90%] mt-10 mx-auto relative">
+    <div class="flex flex-col md:flex-row items-start md:items-start gap-6 relative">
+      <!-- Gambar Produk -->
+      <div class="relative w-full md:w-[50%] max-w-[600px] md:max-w-[500px] h-auto md:h-[450px] flex items-center justify-center overflow-hidden rounded-lg shadow-lg mx-auto">
+          <button id="prev-btn" 
+              class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full z-10">
+              &#10094;
+          </button>
+
+          <img id="product-image" src="gambar-produk.jpg" alt="Product Image" 
+              class="w-full h-full object-cover md:rounded-lg shadow-lg">
+
+          <button id="next-btn" 
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full z-10">
+              &#10095;
+          </button>
+      </div>
+
+
+
+        <!-- Detail Produk -->
+        <div class="w-full md:w-[45%] flex flex-col justify-center">
+            <h1 id="product-name" class="text-2xl md:text-4xl font-cormorant font-bold"></h1>
+            <p id="product-price" class="text-xl md:text-3xl font-cormorant text-[#1c1b1b] font-semibold mt-2"></p>
+
+            <!-- Deskripsi Produk -->
+            <div id="product-description" class="text-md md:text-lg mt-4"></div>
+
+            <!-- Link ke marketplace -->
+            <div class="flex flex-col space-y-3 mt-4 w-full md:w-[90%]">
+                <a id="tokopedia-link" href="#" target="_blank" 
+                    class="flex items-center justify-center bg-green-500 text-white font-semibold px-6 py-4 rounded-lg shadow-lg w-full">
+                    <img class="w-6 h-6 mr-2" src="./images/tokopedia-icon.png" alt="Tokopedia">
+                    Beli di Tokopedia
+                </a>
+
+                <a id="shopee-link" href="#" target="_blank" 
+                    class="flex items-center justify-center bg-orange-500 text-white font-semibold px-6 py-4 rounded-lg shadow-lg w-full">
+                    <img class="w-6 h-6 mr-2" src="./images/shopee-icon.png" alt="Shopee">
+                    Beli di Shopee
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+ 
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+<script src="script.js" type="text/javascript"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
