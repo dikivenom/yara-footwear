@@ -10,20 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container flex items-center justify-between mx-auto bg-[#1c1b1b] md:py-3">
+  <header id="home">
+    <div class="w-full flex items-center justify-between bg-[#1c1b1b] md:py-3">
       <div class="logo ml-3">
         <a href="#home">
           
-          <img class="w-24 md:w-32 h-auto py-3 px-3" src="./images/LOGO YARA PNK_PJG.png" alt="Logo Yara">
+          <img class="w-24 md:w-32 h-auto py-3 px-3 cur" src="./images/LOGO YARA PNK_PJG.png" alt="Logo Yara">
         </a>
       </div>
        <nav id="navigation">
         <ul class="flex gap-4  py-1 px-6 hidden md:flex">
-          <li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold">Home</li>
-          <li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold">About</li>
-          <li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold">Product</li>
-          <li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold">Contact</li>
+         <a href="#home"> <li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold cursor-pointer">Home</li></a>
+         <a href="#collections"><li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold cursor-pointer">Koleksi</li></a> 
+         <a href="#product"><li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold cursor-pointer">Produk</li></a>
+         <a href="#"><li class="text-white hover:bg-pink-300 hover:text-[#1c1b1b] px-3 py-2 rounded-xl font-cormorant font-bold cursor-pointer">Contact</li></a>
         </ul>
        </nav>
        <div id="hamburger" class="flex flex-col justify-center md:hidden lg:hidden"white
@@ -42,10 +42,11 @@
     </div>
     <div id="mobile-nav" class="hidden mx-auto w-[90%] my-3 bg-[#fbf4ea]">
       <ul class="gap-4 py-3 px-3 mx-2">
-        <li class="py-2 px-3 cursor-pointer ease-in duration-100 bg-[#1c1b1b] text-white font-cormorant font-bold">Home</li>
-        <li class="py-2 px-3 cursor-pointer ease-in duration-100 hover:bg-[#1c1b1b] hover:bg-opacity-55 hover:text-white font-cormorant font-bold text-[#1c1b1b]">About</li>
-        <li class="py-2 px-3 cursor-pointer ease-in duration-100 hover:bg-[#1c1b1b] hover:text-white font-cormorant font-bold text-[#1c1b1b]">Product</li>
-        <li class="py-2 px-3 cursor-pointer ease-in duration-100 hover:bg-[#1c1b1b] hover:text-white font-cormorant font-bold text-[#1c1b1b]">Contact</li>
+       <a href="#"> <li class="py-2 px-3 cursor-pointer ease-in duration-100 bg-[#1c1b1b] text-white font-cormorant font-bold">Home</li></a>
+       <a href="#"> <li class="py-2 px-3 cursor-pointer ease-in duration-100 hover:bg-[#1c1b1b] hover:bg-opacity-55 hover:text-white font-cormorant font-bold text-[#1c1b1b]">Koleksi</li></a>
+       <a href="#"><li class="py-2 px-3 cursor-pointer ease-in duration-100 hover:bg-[#1c1b1b] hover:bg-opacity-55 hover:text-white font-cormorant font-bold text-[#1c1b1b]">Produk</li></a>
+       <a href="#"> <li class="py-2 px-3 cursor-pointer ease-in duration-100 hover:bg-[#1c1b1b] hover:bg-opacity-55 hover:text-white font-cormorant font-bold text-[#1c1b1b]">Contact</li></a>
+
       </ul>
     </div>
   </header>
