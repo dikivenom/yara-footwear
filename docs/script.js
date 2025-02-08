@@ -9,8 +9,9 @@ hamburger.addEventListener('click', function(){
 document.addEventListener("DOMContentLoaded", function () {
   const evelynImages = [
       "./images/evelyn-yara.jpeg",
-      "./images/evelyn2.jpg",
       "./images/evelyn3.jpg",
+      "./images/evelyn-black.jpg",
+      "./images/evelyn2.jpg",
       "./images/evelyn4.jpg"
   ];
 
