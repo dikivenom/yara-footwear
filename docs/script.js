@@ -7,13 +7,13 @@ hamburger.addEventListener('click', function(){
 })
 
 document.addEventListener("DOMContentLoaded", function () {
-  const evelynImages = [
-    "./images/evelyn-yara.jpeg",
-      "./images/evelyn3.jpg",
-      "./images/evelyn-black.jpg",
-      "./images/evelyn2.jpg",
-      "./images/evelyn4.jpg"
-  ];
+    const evelynImages = [
+        "./images/evelyn-yara.jpeg",
+        "./images/evelyn3.jpg",
+        "./images/evelyn-black.jpg",
+        "./images/evelyn2.jpg",
+        "./images/evelyn4.jpg"
+    ];
 
   const eloiseImages = [
       "./images/eloise-yara.jpg",
@@ -138,7 +138,10 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("shopee-link").href = "https://shopee.co.id/Evelyn-Yara-Footwear-Papake.id-Heels-Wanita-3cm-i.255026444.28224928826?sp_atk=c10f4f25-778f-4e7a-b197-b7480c19f007";
       document.getElementById("tiktok-link").href = "";
   } else if (name === "Eloise Yara Shoes"){
-    document.getElementById("shopee-link").href= "https://shopee.co.id/Eloise-Yara-Footwear-Papake.id-Heels-Wanita-Aksen-Tali-Karet-Hak-3cm-Nyaman-Elegan-i.255026444.26474925503"
+    document.getElementById("shopee-link").href= "https://shopee.co.id/Eloise-Yara-Footwear-Papake.id-Heels-Wanita-Aksen-Tali-Karet-Hak-3cm-Nyaman-Elegan-i.255026444.26474925503";
+    document.getElementById("tiktok-link").href = "";
+  } else if (name == "Hana Yara Shoes") {
+    document.getElementById("shopee-link").href= "https://shopee.co.id/HANA-SEPATU-MULES-TERBARU-WANITA-KEKINIAN-TERLARIS-YARA-FOOTWEAR-PAPAKE-i.255026444.15012313199"
   }
 });
 
