@@ -16,6 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
   const eloiseImages = [
+      "./images/eloise-maroon-side.jpg",
+      "./images/eloise-cream-side.jpg",
+      "./images/eloise-black-side.jpg",
+      "./images/eloise-moca-side.jpg",
+      "./images/eloise-maroon-top.jpg",
+      "./images/eloise-cream-top.jpg",
+      "./images/eloise-black-top.jpg",
+      "./images/eloise-moca-top.jpg",
+      "./images/eloise-maroon-2.jpg",
+      "./images/eloise-cream-2.jpg",
+      "./images/eloise-black-2.jpg",
+      "./images/eloise-moca-2.jpg",
+      "./images/eloise-all-colors.jpg",
       "./images/eloise-yara.jpg",
       "./images/eloise2.jpg", 
       "./images/eloise3.jpg" 
@@ -66,8 +79,33 @@ document.addEventListener("DOMContentLoaded", function () {
     "./images/faye-cream-2.jpg",
     "./images/faye-all-colors.jpg",
     "./images/faye-all-colors-2.jpg"
+  ];
 
+  const lylieImages = [
+    "./images/lylie-white-side.jpg",
+    "./images/lylie-cream-side.jpg",
+    "./images/lylie-biscuit-side.jpg",
+    "./images/lylie-beige-side.jpg",
+    "./images/lylie-tan-side.jpg",
+    "./images/lylie-white-top.jpg",
+    "./images/lylie-cream-top.jpg",
+    "./images/lylie-biscuit-top.jpg",
+    "./images/lylie-beige-top.jpg",
+    "./images/lylie-tan-top.jpg",
+    "./images/lylie-white-2.jpg",
+    "./images/lylie-cream-2.jpg",
+    "./images/lylie-biscuit-2.jpg",
+    "./images/lylie-beige-2.jpg",
+    "./images/lylie-tan-2.jpg",
+    "./images/lylie-all-colors.jpg",
+  ];
 
+  const nikiImages = [
+    "./images/niki-mocca-2.jpeg",
+    "./images/niki-cream-2.jpg",
+    "./images/niki-black-2.jpg",
+    "./images/niki-3-colors.jpg",
+    "./images/niki-all-colors.jpg"
   ]
 
   let currentIndex = 0;
@@ -86,6 +124,10 @@ document.addEventListener("DOMContentLoaded", function () {
     images = millieImages;
   } else if (name && name.includes("Faye")){
     images = fayeImages;
+  } else if (name && name.includes("Lylie")){
+    images = lylieImages;
+  } else if (name && name.includes("Niki")){
+    images = nikiImages;
   }
   document.getElementById("prev-btn").addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
@@ -191,7 +233,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   `,
-      "Hana Yara Shoes": `
+  "Lylie Yara Heels": `
+ <div class="text-gray-800">
+   <button class="font-semibold font-poppins text-md md:text-lg mt-2 text-[#697565]" id="detail-produk-btn">Detail Produk</button>
+   <ul id="detail-list-produk" class="list-disc ml-5 space-y-1">
+       <li class="font-poppins text-sm md:text-base">Model: Mules Heels</li>
+       <li class="font-poppins text-sm md:text-base">Tinggi Hak: ±3cm</li>
+       <li class="font-poppins text-sm md:text-base">Bahan Upper: PU Leather Premium</li>
+       <li class="font-poppins text-sm md:text-base">Bahan Sol: Karet TPR Anti-Slip</li>
+       <li class="font-poppins text-sm md:text-base">Warna: Hitam, Putih, Beige, Biscuit, Cream, Tan</li>
+       <li class="font-poppins text-sm md:text-base">Size: 37 | 38 | 39 | 40 | 41</li>
+       <li class="font-poppins text-sm md:text-base">Berat: ±500gr</li>
+   </ul>
+   <h3 class="font-semibold font-poppins text-md md:text-lg mt-2 text-[#697565]">Panduan Ukuran (Insole Length)</h3>
+   <ul class="list-disc ml-5 space-y-1">
+       <li class="font-poppins text-sm md:text-base">37 = 23 cm</li>
+       <li class="font-poppins text-sm md:text-base">38 = 23,5 cm</li>
+       <li class="font-poppins text-sm md:text-base">39 = 24 cm</li>
+       <li class="font-poppins text-sm md:text-base">40 = 24,5 cm</li>
+       <li class="font-poppins text-sm md:text-base">41 = 25 cm</li>
+   </ul>
+   <p class="mt-3 font-poppins text-sm text-red-600 font-semibold">⚠️ Disarankan pilih 1 size lebih besar jika kaki lebar atau lebih suka longgar.</p>
+</div>
+
+
+
+ `,
+      "Hana Yara Flat": `
           <div class="text-gray-800">
               <h3 class="font-semibold text-md md:text-lg mt-2 text-[#697565]">Detail Produk</h3>
               <ul class="list-disc ml-5 space-y-1">
@@ -200,12 +268,9 @@ document.addEventListener("DOMContentLoaded", function () {
 <li class="font-poppins text-sm md:text-base">Model: Open-back, slip-on, sangat praktis untuk dipakai dan dilepas</li>
 <li class="font-poppins text-sm md:text-base">Warna: Tersedia dalam warna netral dan pastel seperti hitam, putih, beige, cokelat, dan dusty pink</li>
 <li class="font-poppins text-sm md:text-base">Detail Desain: Minimalis dengan aksen elegan seperti pita kecil, buckle logam, atau jahitan rapi</li>
-
-
-
               </ul>
 
-              <ul class="font-poppins text-sm md:text-base">
+<ul class="font-poppins text-sm md:text-base">
     <h3 class="font-semibold font-poppins  text-md md:text-lg mt-2 text-[#697565]">Panduan Ukuran (CM): </h3>
     <li>36 →  22.5 - 23 CM</li>
     <li>37 →  23 - 23.5 CM</li>
@@ -213,9 +278,30 @@ document.addEventListener("DOMContentLoaded", function () {
     <li>39 →  24 - 24.5 CM</li>
     <li>40 →  24.5 - 25 CM</li>
 </ul>
+   </div>
+      `,
 
-          </div>
-      `
+      "Niki Yara Flat": `
+      <div class="text-gray-800">
+    <h3 class="font-semibold text-md md:text-lg mt-2 text-[#697565]">Detail Produk</h3>
+    <ul class="list-disc ml-5 space-y-1">
+        <li class="font-poppins text-sm md:text-base">Bahan: PU Leather premium</li>
+        <li class="font-poppins text-sm md:text-base">Sol: Karet Non-Slip</li>
+        <li class="font-poppins text-sm md:text-base">Tinggi: 1,5 cm</li>
+    </ul>
+
+    <h3 class="font-semibold text-md md:text-lg mt-4 text-[#697565]">Panjang Sandal Total:</h3>
+    <ul class="list-disc ml-5 space-y-1 font-poppins text-sm md:text-base">
+        <li>Size 37 : 22 cm (untuk panjang kaki 21 cm)</li>
+        <li>Size 38 : 23 cm (untuk panjang kaki 22 cm)</li>
+        <li>Size 39 : 24 cm (untuk panjang kaki 23 cm)</li>
+        <li>Size 40 : 25 cm (untuk panjang kaki 24 cm)</li>
+    </ul>
+
+     <p class="mt-3 font-poppins text-sm text-red-600 font-semibold">⚠️ Disarankan pilih 1 size lebih besar jika kaki lebar atau lebih suka longgar.</p>
+</div>
+
+  `
   };
 
   if (name && params.get("price") && params.get("image")) {
@@ -232,7 +318,18 @@ document.addEventListener("DOMContentLoaded", function () {
   } else if (name === "Eloise Yara Heels"){
     document.getElementById("shopee-link").href= "https://shopee.co.id/Eloise-Yara-Footwear-Papake.id-Heels-Wanita-Aksen-Tali-Karet-Hak-3cm-Nyaman-Elegan-i.255026444.26474925503";
     document.getElementById("tiktok-link").href = "";
-  } else if (name == "Hana Yara Shoes") {
+  } else if(name === "Millie Yara Heels"){
+    document.getElementById("shopee-link").href= "https://shopee.co.id/Millie-Yara-Footwear-Papake.id-Mules-Hak-3cm-i.255026444.25940979008";
+    document.getElementById("tiktok-link").href = "";
+  } else if(name === "Faye Yara Heels"){
+    document.getElementById("shopee-link").href= "https://shopee.co.id/Faye-Yara-Footwear-Papake.id-Heels-Wanita-3cm-Pengait-Sabuk-Modis-i.255026444.25740968599";
+    document.getElementById("tiktok-link").href = "";
+  } else if(name === "Lylie Yara Heels"){
+    document.getElementById("shopee-link").href= "https://shopee.co.id/Lylie-Yara-Footwear-Papake.id-Sandal-Heels-Cantik-Sepatu-Mules-3-cm-i.255026444.26274896167";
+    document.getElementById("tiktok-link").href = "";
+  }
+   
+  else if (name == "Hana Yara Shoes") {
     document.getElementById("shopee-link").href= "https://shopee.co.id/HANA-SEPATU-MULES-TERBARU-WANITA-KEKINIAN-TERLARIS-YARA-FOOTWEAR-PAPAKE-i.255026444.15012313199"
   }
 });
