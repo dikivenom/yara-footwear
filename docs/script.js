@@ -32,6 +32,44 @@ document.addEventListener("DOMContentLoaded", function () {
       
   ];
 
+  const millieImages = [
+    "./images/millie-biscuit-side.heic",
+    "./images/millie-black-side.heic",
+    "./images/millie-cream-side.jpg",
+    "./images/millie-beige-side.heic",
+    "./images/millie-beige-2.jpg",
+    "./images/millie-black-2.jpg",
+    "./images/millie-cream-2.jpg",
+    "./images/millie-biscuit-2.jpg",
+    "./images/millie-beige-top.jpg",
+    "./images/millie-black-top.jpg",
+    "./images/millie-cream-top.jpg",
+    "./images/millie-biscuit-top.jpg",
+    "./images/millie-all-colors.jpg"
+  ];
+
+  const fayeImages = [
+    "./images/faye-salem-side.jpg",
+    "./images/faye-black-side.jpg",
+    "./images/faye-moca-side.jpg",
+    "./images/faye-beige-side.jpg",
+    "./images/faye-cream-side.jpg",
+    "./images/faye-salem-top.jpg",
+    "./images/faye-black-top.jpg",
+    "./images/faye-moca-top.jpg",
+    "./images/faye-beige-top.jpg",
+    "./images/faye-cream-top.jpg",
+    "./images/faye-salem-2.jpg",
+    "./images/faye-black-2.jpg",
+    "./images/faye-moca-2.jpg",
+    "./images/faye-beige-2.jpg",
+    "./images/faye-cream-2.jpg",
+    "./images/faye-all-colors.jpg",
+    "./images/faye-all-colors-2.jpg"
+
+
+  ]
+
   let currentIndex = 0;
   const productImage = document.getElementById("product-image");
   const params = new URLSearchParams(window.location.search);
@@ -44,8 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
       images = eloiseImages;  
   } else if (name && name.includes("Hana")) {
       images = hanaImages;
+  } else if (name && name.includes("Millie")) {
+    images = millieImages;
+  } else if (name && name.includes("Faye")){
+    images = fayeImages;
   }
-
   document.getElementById("prev-btn").addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       productImage.src = images[currentIndex];
@@ -57,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const productDescriptions = {
-      "Evelyn Yara Shoes": `
+      "Evelyn Yara Heels": `
           <div class="text-gray-800">
               <button class="font-semibold font-poppins text-md md:text-lg mt-2 text-[#697565]" id="detail-produk-btn">Detail Produk</button>
               <ul id="detail-list-produk" class="list-disc ml-5 space-y-1">
@@ -79,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="mt-3 font-poppins text-sm text-red-600 font-semibold">⚠️ Disarankan pilih 1 size lebih besar jika kaki lebar atau lebih suka longgar.</p>
           </div>
       `,
-      "Eloise Yara Shoes": `
+      "Eloise Yara Heels": `
           <div class="text-gray-800">
               <h3 class="font-semibold font-poppins text-md md:text-lg mt-2 text-[#697565]">Detail Produk</h3>
               <ul class="list-disc ml-5 space-y-1">
@@ -101,6 +142,55 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p class="mt-3 font-poppins text-sm text-red-600 font-semibold">⚠️ Disarankan pilih 1 size lebih besar jika kaki lebar atau lebih suka longgar.</p>
           </div>
       `,
+
+      "Millie Yara Heels": `
+   <div class="text-gray-800">
+    <button class="font-semibold font-poppins text-md md:text-lg mt-2 text-[#697565]" id="detail-produk-btn">Detail Produk</button>
+    <ul id="detail-list-produk" class="list-disc ml-5 space-y-1">
+        <li class="font-poppins text-sm md:text-base">Model: Heels mules dengan tali belakang</li>
+        <li class="font-poppins text-sm md:text-base">Tinggi Hak: ±3cm</li>
+        <li class="font-poppins text-sm md:text-base">Bahan Upper: Kulit Sintetis Premium</li>
+        <li class="font-poppins text-sm md:text-base">Bahan Sol: Karet TPR Anti-Slip</li>
+        <li class="font-poppins text-sm md:text-base">Warna: Hitam, Beige, Biscuit, Cream</li>
+        <li class="font-poppins text-sm md:text-base">Size: 37 | 38 | 39 | 40 | 41</li>
+        <li class="font-poppins text-sm md:text-base">Berat: ±500gr</li>
+    </ul>
+    <h3 class="font-semibold font-poppins text-md md:text-lg mt-2 text-[#697565]">Panduan Ukuran (Insole Length)</h3>
+    <ul class="list-disc ml-5 space-y-1">
+        <li class="font-poppins text-sm md:text-base">37 = 23 cm</li>
+        <li class="font-poppins text-sm md:text-base">38 = 23,5 cm</li>
+        <li class="font-poppins text-sm md:text-base">39 = 24 cm</li>
+        <li class="font-poppins text-sm md:text-base">40 = 24,5 cm</li>
+        <li class="font-poppins text-sm md:text-base">41 = 25 cm</li>
+    </ul>
+    <p class="mt-3 font-poppins text-sm text-red-600 font-semibold">⚠️ Disarankan pilih 1 size lebih besar jika kaki lebar atau lebih suka longgar.</p>
+</div>
+
+  `,
+  "Faye Yara Heels": `
+   <div class="text-gray-800">
+    <button class="font-semibold font-poppins text-md md:text-lg mt-2 text-[#697565]" id="detail-produk-btn">Detail Produk</button>
+    <ul id="detail-list-produk" class="list-disc ml-5 space-y-1">
+        <li class="font-poppins text-sm md:text-base">Model: Heels dengan tali belakang & aksen pengait sabuk</li>
+        <li class="font-poppins text-sm md:text-base">Tinggi Hak: ±3cm</li>
+        <li class="font-poppins text-sm md:text-base">Bahan Upper: Kulit Sintetis Premium</li>
+        <li class="font-poppins text-sm md:text-base">Bahan Sol: Karet TPR Anti-Slip</li>
+        <li class="font-poppins text-sm md:text-base">Pilihan Warna: Salem, Hitam, Beige, Mocca, Cream</li>
+        <li class="font-poppins text-sm md:text-base">Size: 37 | 38 | 39 | 40 | 41</li>
+    </ul>
+    <h3 class="font-semibold font-poppins text-md md:text-lg mt-2 text-[#697565]">Panduan Ukuran (Insole Length)</h3>
+    <ul class="list-disc ml-5 space-y-1">
+        <li class="font-poppins text-sm md:text-base">37 = 23 cm</li>
+        <li class="font-poppins text-sm md:text-base">38 = 23,5 cm</li>
+        <li class="font-poppins text-sm md:text-base">39 = 24 cm</li>
+        <li class="font-poppins text-sm md:text-base">40 = 24,5 cm</li>
+        <li class="font-poppins text-sm md:text-base">41 = 25 cm</li>
+    </ul>
+    <p class="mt-3 font-poppins text-sm text-red-600 font-semibold">⚠️ Disarankan pilih 1 size lebih besar jika kaki lebar atau lebih suka longgar.</p>
+</div>
+
+
+  `,
       "Hana Yara Shoes": `
           <div class="text-gray-800">
               <h3 class="font-semibold text-md md:text-lg mt-2 text-[#697565]">Detail Produk</h3>
@@ -110,6 +200,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <li class="font-poppins text-sm md:text-base">Model: Open-back, slip-on, sangat praktis untuk dipakai dan dilepas</li>
 <li class="font-poppins text-sm md:text-base">Warna: Tersedia dalam warna netral dan pastel seperti hitam, putih, beige, cokelat, dan dusty pink</li>
 <li class="font-poppins text-sm md:text-base">Detail Desain: Minimalis dengan aksen elegan seperti pita kecil, buckle logam, atau jahitan rapi</li>
+
+
 
               </ul>
 
@@ -134,10 +226,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
-  if (name === "Evelyn Yara Shoes") {
+  if (name === "Evelyn Yara Heels") {
       document.getElementById("shopee-link").href = "https://shopee.co.id/Evelyn-Yara-Footwear-Papake.id-Heels-Wanita-3cm-i.255026444.28224928826?sp_atk=c10f4f25-778f-4e7a-b197-b7480c19f007";
       document.getElementById("tiktok-link").href = "";
-  } else if (name === "Eloise Yara Shoes"){
+  } else if (name === "Eloise Yara Heels"){
     document.getElementById("shopee-link").href= "https://shopee.co.id/Eloise-Yara-Footwear-Papake.id-Heels-Wanita-Aksen-Tali-Karet-Hak-3cm-Nyaman-Elegan-i.255026444.26474925503";
     document.getElementById("tiktok-link").href = "";
   } else if (name == "Hana Yara Shoes") {
