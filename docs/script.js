@@ -106,7 +106,37 @@ document.addEventListener("DOMContentLoaded", function () {
     "./images/niki-black-2.jpg",
     "./images/niki-3-colors.jpg",
     "./images/niki-all-colors.jpg"
-  ]
+  ];
+
+  const diaraImages = [
+    "./images/diara-pink.jpg",
+    "./images/diara-black.jpg",
+    "./images/diara-mint.jpg",
+    "./images/diara-cream-black.jpg",
+    "./images/diara-cream-black-side.jpg",
+    "./images/diara-all-colors.jpg",
+    "./images/diara-all-colors-realpic.jpg"
+  ];
+
+const alulaImages = [
+  "./images/alula-pink.jpg",
+  "./images/alula-mocca.jpg",
+  "./images/alula-black.jpg",
+  "./images/alula-gray.jpg",
+  "./images/alula-white.jpg",
+  "./images/alula-salem.jpg",
+  "./images/alula-all-colors.jpg",
+  "./images/alula-realpic.jpg",
+  "./images/alula-black-realpic.jpg"
+];
+
+const levinaImages = [
+  "./images/levina-mocca.jpg",
+  "./images/levina-tan.jpg",
+  "./images/levina-black.jpg",
+  "./images/levina-white.jpg",
+]
+
 
   let currentIndex = 0;
   const productImage = document.getElementById("product-image");
@@ -128,6 +158,10 @@ document.addEventListener("DOMContentLoaded", function () {
     images = lylieImages;
   } else if (name && name.includes("Niki")){
     images = nikiImages;
+  } else if (name && name.includes("Diara")){
+    images = diaraImages;
+  } else if (name && name.includes("Alula")){
+    images = alulaImages;
   }
   document.getElementById("prev-btn").addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
@@ -301,7 +335,51 @@ document.addEventListener("DOMContentLoaded", function () {
      <p class="mt-3 font-poppins text-sm text-red-600 font-semibold">⚠️ Disarankan pilih 1 size lebih besar jika kaki lebar atau lebih suka longgar.</p>
 </div>
 
-  `
+  `,
+
+  "Alula Yara Footwear": `
+   <div class="text-gray-800">
+    <h3 class="font-semibold text-md md:text-lg mt-2 text-[#697565]">Detail Produk</h3>
+    <ul class="list-disc ml-5 space-y-1">
+        <li class="font-poppins text-sm md:text-base">Bahan: PU Leather</li>
+        <li class="font-poppins text-sm md:text-base">Sol: Karet</li>
+        <li class="font-poppins text-sm md:text-base">Tinggi Hak: 3 cm</li>
+        <li class="font-poppins text-sm md:text-base">Size: 37 - 40</li>
+    </ul>
+
+    <h3 class="font-semibold text-md md:text-lg mt-4 text-[#697565]">Panjang Sandal Total:</h3>
+    <ul class="list-disc ml-5 space-y-1 font-poppins text-sm md:text-base">
+        <li>Size 37 : 24,5 cm (untuk panjang kaki 22,5 cm)</li>
+        <li>Size 38 : 25 cm (untuk panjang kaki 23 cm)</li>
+        <li>Size 39 : 25,5 cm (untuk panjang kaki 23,5 cm - 24 cm)</li>
+        <li>Size 40 : 26 cm (untuk panjang kaki 24,5 cm - 25 cm)</li>
+    </ul>
+
+    <p class="mt-3 font-poppins text-sm text-green-600 font-semibold">✅ Untuk size/ukuran pada sandal ini termasuk Normal yaa sist.</p>
+</div>
+`,
+"Levina Yara Footwear": `
+   <div class="text-gray-800">
+    <h3 class="font-semibold text-md md:text-lg mt-2 text-[#697565]">Detail Produk</h3>
+    <ul class="list-disc ml-5 space-y-1">
+        <li class="font-poppins text-sm md:text-base">Material: Spons, atas lapis PU Leather PREMIUM</li>
+        <li class="font-poppins text-sm md:text-base">Sol bawah: Karet</li>
+        <li class="font-poppins text-sm md:text-base">Tinggi: 4 cm</li>
+        <li class="font-poppins text-sm md:text-base">Size: 36 - 40</li>
+    </ul>
+
+    <h3 class="font-semibold text-md md:text-lg mt-4 text-[#697565]">Panjang Sandal Total:</h3>
+    <ul class="list-disc ml-5 space-y-1 font-poppins text-sm md:text-base">
+        <li>Size 36 : 24 cm (untuk panjang kaki 22,5 cm)</li>
+        <li>Size 37 : 24,5 cm (untuk panjang kaki 23 cm)</li>
+        <li>Size 38 : 25 cm (untuk panjang kaki 23,5 cm)</li>
+        <li>Size 39 : 25,5 cm (untuk panjang kaki 24 cm - 24,5 cm)</li>
+        <li>Size 40 : 26 cm (untuk panjang kaki 25 cm - 25,5 cm)</li>
+    </ul>
+
+    <p class="mt-3 font-poppins text-sm text-green-600 font-semibold">✅ Untuk size/ukuran pada sandal ini termasuk Normal yaa sist.</p>
+</div>
+`
   };
 
   if (name && params.get("price") && params.get("image")) {
@@ -315,22 +393,43 @@ document.addEventListener("DOMContentLoaded", function () {
   if (name === "Evelyn Yara Heels") {
       document.getElementById("shopee-link").href = "https://shopee.co.id/Evelyn-Yara-Footwear-Papake.id-Heels-Wanita-3cm-i.255026444.28224928826?sp_atk=c10f4f25-778f-4e7a-b197-b7480c19f007";
       document.getElementById("tiktok-link").href = "";
+
   } else if (name === "Eloise Yara Heels"){
     document.getElementById("shopee-link").href= "https://shopee.co.id/Eloise-Yara-Footwear-Papake.id-Heels-Wanita-Aksen-Tali-Karet-Hak-3cm-Nyaman-Elegan-i.255026444.26474925503";
     document.getElementById("tiktok-link").href = "";
+
   } else if(name === "Millie Yara Heels"){
     document.getElementById("shopee-link").href= "https://shopee.co.id/Millie-Yara-Footwear-Papake.id-Mules-Hak-3cm-i.255026444.25940979008";
     document.getElementById("tiktok-link").href = "";
+
   } else if(name === "Faye Yara Heels"){
     document.getElementById("shopee-link").href= "https://shopee.co.id/Faye-Yara-Footwear-Papake.id-Heels-Wanita-3cm-Pengait-Sabuk-Modis-i.255026444.25740968599";
     document.getElementById("tiktok-link").href = "";
+    
   } else if(name === "Lylie Yara Heels"){
     document.getElementById("shopee-link").href= "https://shopee.co.id/Lylie-Yara-Footwear-Papake.id-Sandal-Heels-Cantik-Sepatu-Mules-3-cm-i.255026444.26274896167";
     document.getElementById("tiktok-link").href = "";
   }
    
   else if (name == "Hana Yara Shoes") {
-    document.getElementById("shopee-link").href= "https://shopee.co.id/HANA-SEPATU-MULES-TERBARU-WANITA-KEKINIAN-TERLARIS-YARA-FOOTWEAR-PAPAKE-i.255026444.15012313199"
+    document.getElementById("shopee-link").href= "https://shopee.co.id/HANA-SEPATU-MULES-TERBARU-WANITA-KEKINIAN-TERLARIS-YARA-FOOTWEAR-PAPAKE-i.255026444.15012313199";
+    document.getElementById("tiktok-link").href = "";
+  }
+  else if (name == "Niki Yara Flat") {
+    document.getElementById("shopee-link").href= "https://shopee.co.id/NIKI-SANDAL-WANITA-FLAT-MOTIF-ANYAM-PAPAKE-BY-YARA-FOOTWEAR-i.255026444.24258976097";
+    document.getElementById("tiktok-link").href = "";
+  }
+  else if (name == "Diara Yara Footwear") {
+    document.getElementById("shopee-link").href= "https://shopee.co.id/Diara-Yara-Footwear-Papake.id-Sandal-Heels-Cantik-Sandal-Wanita-Platform-Puffy-Empuk-Winod-i.255026444.15590025677?sp_atk=7bf557d4-75a6-4c25-97c7-c007d4a450de";
+    document.getElementById("tiktok-link").href = "";
+  }
+  else if (name == "Alula Yara Footwear") {
+    document.getElementById("shopee-link").href= "https://shopee.co.id/ALULA-SANDAL-SENDAL-WANITA-SARA-SARA-LAPEPA-WEDGES-SOL-KARET-i.255026444.21576958412?sp_atk=4b7e6ceb-262c-410f-9eac-b14f0951e849";
+    document.getElementById("tiktok-link").href = "";
+
+  } else if (name == "Levina Yara Footwear") {
+    document.getElementById("shopee-link").href= "https://shopee.co.id/Levina-Sandal-Wanita-Korea-Delisha-Damelia-Sandals-i.255026444.18624034724?sp_atk=d3936e7f-f0c3-4ca6-9e08-719771a8b02b";
+    document.getElementById("tiktok-link").href = "";
   }
 });
 
