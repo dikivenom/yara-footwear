@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => { 
+
+
+document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.getElementById("navbar");
   const sidebar = document.getElementById("sidebar");
   const btnSidebarToggler = document.getElementById("btnSidebarToggler");
@@ -21,9 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
-});
 
-document.addEventListener("DOMContentLoaded", function () {
     const evelynImages = [
         "./images/evelyn-yara.jpeg",
         "./images/evelyn3.jpg",
