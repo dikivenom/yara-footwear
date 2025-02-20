@@ -1,10 +1,27 @@
-const hamburger = document.getElementById('hamburger')
-const mobileNav = document.getElementById('mobile-nav')
+document.addEventListener("DOMContentLoaded", () => { 
+  const navbar = document.getElementById("navbar");
+  const sidebar = document.getElementById("sidebar");
+  const btnSidebarToggler = document.getElementById("btnSidebarToggler");
+  const navClosed = document.getElementById("navClosed");
+  const navOpen = document.getElementById("navOpen");
+  const body = document.body;
 
-hamburger.addEventListener('click', function(){
-    
-    mobileNav.classList.toggle('hidden')
-})
+  btnSidebarToggler.addEventListener("click", (e) => {
+      e.preventDefault();
+      sidebar.classList.toggle("show");
+      navClosed.classList.toggle("hidden");
+      navOpen.classList.toggle("hidden");
+
+      // Perbaikan: Atur overflow-hidden pada body hanya saat sidebar terbuka
+      if (sidebar.classList.contains("show")) {
+          body.classList.add("overflow-hidden");
+      } else {
+          body.classList.remove("overflow-hidden");
+      }
+  });
+
+  sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const evelynImages = [
