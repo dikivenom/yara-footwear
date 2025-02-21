@@ -179,6 +179,9 @@ const levinaImages = [
     images = diaraImages;
   } else if (name && name.includes("Alula")){
     images = alulaImages;
+  
+  } else if (name && name.includes("Levina")){
+    images = levinaImages;
   }
   document.getElementById("prev-btn").addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
@@ -440,7 +443,7 @@ const levinaImages = [
 
   if (name === "Evelyn Yara Heels") {
       document.getElementById("shopee-link").href = "https://shopee.co.id/Evelyn-Yara-Footwear-Papake.id-Heels-Wanita-3cm-i.255026444.28224928826?sp_atk=c10f4f25-778f-4e7a-b197-b7480c19f007";
-      document.getElementById("tiktok-link").href = "";
+      document.getElementById("tiktok-link").href = "https://vt.tokopedia.com/t/ZSMhUUCT6/";
 
   } else if (name === "Eloise Yara Heels"){
     document.getElementById("shopee-link").href= "https://shopee.co.id/Eloise-Yara-Footwear-Papake.id-Heels-Wanita-Aksen-Tali-Karet-Hak-3cm-Nyaman-Elegan-i.255026444.26474925503";
